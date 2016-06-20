@@ -34,7 +34,6 @@ class CountApp extends React.Component {
       <div style={styles.app}>
         <h1>FLUX 計數器 Demo</h1>
         <hr />
-        <div>{ this.props.name }</div>
         <span style={styles.count}>{ this.state.clickCount }</span>
         <br />
         <button onClick = { this.addClick }>+</button>
@@ -45,13 +44,13 @@ class CountApp extends React.Component {
   }
 
   addClick() {
-    this.setState({clickCount: this.state.clickCount + 1});
-    // CountActions.addClick();
+    // this.setState({clickCount: this.state.clickCount + 1});
+    CountActions.addClick();
   }
 
   subClick() {
-    this.setState({clickCount: this.state.clickCount - 1});
-    // CountActions.subClick();
+    // this.setState({clickCount: this.state.clickCount - 1});
+    CountActions.subClick();
   }
   
   multiply2() {
