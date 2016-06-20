@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>CountApp</title>
+</head>
+<body>
+  
+  <!-- app -->
+  <div id="app"></div>
+
+  <!-- source -->
+  <script src="./_source/react.js"></script>
+  <script src="./_source/react-dom.js"></script>
+  <script src="./_source/Flux.js"></script>
+  <script src="./_source/EventEmitter.js"></script>
+  <script src="./_source/browser.js"></script>
+  <script>window.App = {};</script>
+  
+  <!-- Flux -->
+  <script type="text/babel" src="./dispatcher/AppDispatcher.js"></script>
+  <script type="text/babel" src="./actions/CountActions.js"></script>
+  <script type="text/babel" src="./stores/CountStore.js"></script>
+  
+  <!-- react component -->
+  <script type="text/babel" src="./view/CountApp.js"></script>
+  
+  <!-- react bulid -->
+  <script type="text/babel">
+    const { CountApp } = window.App;
+    ReactDOM.render(
+      <CountApp name='jacky' />,
+      document.getElementById('app')
+    );
+  </script>
+
+</body>
+</html>
